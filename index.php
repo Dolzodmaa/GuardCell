@@ -1,0 +1,80 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <title>Virtual Guard Cell</title>
+  <meta name="description" content="website description" />
+  <meta name="keywords" content="website keywords, website keywords" />
+  <meta http-equiv="content-type" content="text/html; charset=windows-1252" />
+  <link rel="stylesheet" type="text/css" href="style/style.css" />
+</head>
+
+<body>
+
+  <?php $handle = fopen("counter.txt", "r"); if(!$handle){ echo "could not open the file" ; } else { $counter = ( int ) fread ($handle,20) ; fclose ($handle) ; $counter++ ; $handle = fopen("counter.txt", "w" ) ; fwrite($handle,$counter) ; fclose ($handle) ; } ?>
+
+
+  <div id="main">
+    <div id="header">
+      <div id="logo">
+        <div id="logo_text">
+          <!-- class="logo_colour", allows you to change the colour of the text -->
+
+          <h1 align="center" class="heading">The Virtual Guard Cell</h1>
+          <div id="banner"></div>
+        
+        </div>
+      </div>
+      <div id="menubar">
+        <ul id="menu">
+          <!-- put class="selected" in the li tag for the selected page - to highlight which page you're on -->
+          <li class="selected"><a href="index.php">Introduction</a></li>
+          <li ><a href="gallery.html">Gallery of Guard Cells</a></li>
+          <li>
+            <div class="dropdown"> 
+              <a class="drop">Activities and Lesson Plans</a>
+              <div class="dropdown-content">
+                <a href="activities.html">Activity</a>
+                <a href="lesson.html">Lesson Plan</a>
+
+              </div>
+            </div>
+          </li>
+          <li ><a href="mechanics.html">Mechanics of Stomata</a></li>
+          <li ><a href="3Dstomata.html">3D Modeling</a></li>
+           
+        </ul>
+      </div>
+    </div>
+    <div id="content_header"></div>
+    <div id="site_content">
+    
+      <div id="content">
+        <!-- insert the page content here -->
+        <h1><span style="font-weight:bold">How do plants get carbon dioxide to make sugars using photosynthesis?</span></h1>
+        <p style="font-size:120%;">Unlike many animals (like us!) who eat food with their mouths to get the nutrition they need to build up their bodies and gain energy, plants can make their own food using sunlight, water, and carbon dioxide. Plants have many microscopic pores, called stomata, on their leaves that are surrounded by pairs of guard cells, and they can open these pores to allow CO2 (carbon dioxide) to enter the plant and be converted into sugars using photosynthesis, which can in turn be used to build up the plant body and produce energy. Another function of stomata is somewhat similar to the sweat glands we have, which is controlling how water is transported through and released from the plants, to either cool down the plant when the weather is warm or keep water inside when they experience a drought.</p>
+        <div id="img1">
+           <img src="stomatal function.png" style="width:450px;height:350px;" alt="intro1" align="middle">
+        </div>
+
+        <p style="font-size:120%;">Scientists have asked many questions about how stomata function, and many different experiments have been performed and models have been built to help better answer these questions. For example, one commonly asked question is: How do plants decide whether to open or close their stomata? One simple model for an answer to this question is that as a plant senses something changing in the environment, like increasing light or decreasing water availability, the plant then controls whether water moves into or out of the guard cells. When water enters the guard cells, they inflate in a way that is similar to a long, skinny water balloon being filled, forcing them to bow outward, and the pore between the two guard cells gets larger, allowing the plant to capture more CO2 and release more water from its body. The process happens in reverse when water moves out from the guard cells, causing them to deflate and close the stomatal pore.</p>
+        <div id="img2">
+           <img src="stomata movement.gif" style="width:350px;height:300px;" alt="intro1" align="middle">
+        </div>
+        <p style="font-size:120%;">This biomechanical model has intrigued scientists and engineers from many different backgrounds. Our group consists of plant biologists, engineering scientists, and computer scientists. Together, we are trying to understand the biological and physical basis of guard cell movement, and potentially apply what we have learned to develop <q>super guard cells</q> that can better regulate CO2 uptake and water loss in plants, improving crop yields and helping to feed more people.  </p>
+        <div id="img3">
+           <img src="modified guard cell.png" style="width:450px;height:300px;" alt="intro1" align="middle">
+        </div>
+
+        
+      </div>
+    </div>
+    <div id="content_footer"></div>
+    <div id="footer">
+      <p>Created by the Guard Cell Wall Team at <span style="font-weight:bold">Penn State University</span>, with support from the National Science Foundation, grant MCB 1616316</p>
+  
+    </div>
+  </div>
+
+</body>
+</html>
