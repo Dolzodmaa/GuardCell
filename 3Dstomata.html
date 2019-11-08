@@ -138,7 +138,7 @@
         
         <p >4. Now we know location of each point in the surface that we just improved by closing the holes. Using these points, we can render this surface for visualization. Then  the surface is smoothed out to get rid of bumps that are caused by slice to slice processing.</p>
         
-        <div id="stl_cont" style="width:1200px;height:1200px;margin:0 auto;"></div>
+        <div id="stl_cont" style="width:600px;height:600px;margin:0 auto;"></div>
 
         <script src="stl_viewer.min.js"></script>        
         <script>
@@ -147,7 +147,7 @@
                 document.getElementById("stl_cont"),
                 {
                 auto_resize:false,
-                zoom:200,
+                zoom:100,
                 models:
                     [
                         {filename:"models/Col_zser01-1_crop_CC_contrast_outer_lnd_1_volume_original_nghbd3_cropped_vcg_taubin.stl", opacity:0.2, x:-23, y:0, z:0, color:"#FF1212", rotationx:90, view_edges:true, display:"smooth"},
